@@ -21,6 +21,15 @@
       platformAutomerge: true,
     },
     {
+      groupName: 'freezed',
+      matchPackageNames: [
+        'freezed',
+        'freezed_annotation',
+      ],
+      automerge: true,
+      platformAutomerge: true,
+    },
+    {
       matchUpdateTypes: [
         'patch',
         'minor',
