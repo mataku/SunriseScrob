@@ -66,7 +66,7 @@ jobs:
       - name: Run tests
         run: flutter test --machine > report.json
       - name: Test Report
-        uses: dorny/test-reporter@v1
+        uses: dorny/test-reporter@v2
         if: always()
         with:
           name: flutter test
