@@ -34,3 +34,4 @@ analyzer:
     - "**/*.freezed.dart"
     - ".env"
     - "**/*.mocks.dart"
+    - "misc/"
