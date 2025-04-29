@@ -20,6 +20,7 @@ Flutter Architecture Sample like Model-View-ViewModel using Last.fm API.
 ### Prepare env
 
 ```
+# .env
 API_KEY=your_lastfm_api_key
 SHARED_SECRET=your_lastfm_shared_secret
 ```
