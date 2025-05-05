@@ -48,7 +48,7 @@ class _AlbumTitleComponent extends StatelessWidget {
   final String artist;
 
   const _AlbumTitleComponent({
-    // ignore: unused_element
+    // ignore: unused_element_parameter
     super.key,
     required this.title,
     required this.artist,

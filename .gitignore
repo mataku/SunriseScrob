@@ -178,3 +178,6 @@ app.*.map.json
 
 # golden failure output
 **/failures/*.png
+
+# FVM Version Cache
+.fvm/

@@ -58,22 +58,7 @@
   enabledManagers: [
     'github-actions',
     'pub',
-  ],
-  customManagers: [
-    {
-      customType: 'regex',
-      fileMatch: [
-        '^.github/actions/setup-flutter-project/action.yml$',
-      ],
-      matchStrings: [
-        ".*flutter-version: '(?<currentValue>.*?)'.*\n",
-      ],
-      depNameTemplate: 'flutter',
-      packageNameTemplate: 'flutter/flutter',
-      datasourceTemplate: 'github-tags',
-      versioningTemplate: 'regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+).*?$',
-      extractVersionTemplate: '^(?<version>.*)$',
-    },
+    'fvm'
   ],
   lockFileMaintenance: {
     enabled: true,

@@ -29,7 +29,7 @@ class _TagComponent extends StatelessWidget {
   final Tag tag;
 
   const _TagComponent({
-    // ignore: unused_element
+    // ignore: unused_element_parameter
     super.key,
     required this.tag,
   });
