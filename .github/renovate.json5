@@ -66,13 +66,13 @@
         '^.github/actions/setup-flutter-project/action.yml$',
       ],
       matchStrings: [
-        '.*flutter-version: \'(?<currentValue>.*?)\'.*\n',
+        ".*flutter-version: '(?<currentValue>.*?)'.*\n",
       ],
       depNameTemplate: 'flutter',
-      lookupNameTemplate: 'flutter/flutter',
+      packageNameTemplate: 'flutter/flutter',
       datasourceTemplate: 'github-tags',
       versioningTemplate: 'regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+).*?$',
-      extractVersionTemplate: '^(?<version>.*)$'
+      extractVersionTemplate: '^(?<version>.*)$',
     },
   ],
   lockFileMaintenance: {
