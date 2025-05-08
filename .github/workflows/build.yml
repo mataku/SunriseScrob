@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   ios:
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
       - name: Prepare env
@@ -32,7 +32,7 @@ jobs:
           flutter build ipa --no-codesign
 
   android:
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
       - name: Setup JDK
@@ -52,7 +52,7 @@ jobs:
 
   test:
     # Align the environment for taking screenshots with the development environment.
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
       - name: Prepare env
