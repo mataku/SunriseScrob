@@ -8,7 +8,7 @@ part 'artist_info_api_response.freezed.dart';
 part 'artist_info_api_response.g.dart';
 
 @freezed
-class ArtistInfoApiResponse with _$ArtistInfoApiResponse {
+abstract class ArtistInfoApiResponse with _$ArtistInfoApiResponse {
   const factory ArtistInfoApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'artist') required ArtistInfoBody body,
@@ -19,7 +19,7 @@ class ArtistInfoApiResponse with _$ArtistInfoApiResponse {
 }
 
 @freezed
-class ArtistInfoBody with _$ArtistInfoBody {
+abstract class ArtistInfoBody with _$ArtistInfoBody {
   const factory ArtistInfoBody({
     required String name,
     required String url,
@@ -38,7 +38,7 @@ class ArtistInfoBody with _$ArtistInfoBody {
 }
 
 @freezed
-class SimilarArtistsBody with _$SimilarArtistsBody {
+abstract class SimilarArtistsBody with _$SimilarArtistsBody {
   const factory SimilarArtistsBody({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'artist') required List<SimilarContentResponse> artists,
@@ -49,7 +49,7 @@ class SimilarArtistsBody with _$SimilarArtistsBody {
 }
 
 @freezed
-class StatsBody with _$StatsBody {
+abstract class StatsBody with _$StatsBody {
   const factory StatsBody({
     required String listeners,
     required String playcount,

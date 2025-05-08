@@ -5,7 +5,7 @@ import 'package:sunrisescrob/model/common_name.dart';
 part 'recent_track.freezed.dart';
 
 @freezed
-class RecentTrack with _$RecentTrack {
+abstract class RecentTrack with _$RecentTrack {
   const factory RecentTrack({
     required CommonName artist,
     required CommonName album,

@@ -5,7 +5,7 @@ part 'top_artists_api_response.freezed.dart';
 part 'top_artists_api_response.g.dart';
 
 @freezed
-class TopArtistsApiResponse with _$TopArtistsApiResponse {
+abstract class TopArtistsApiResponse with _$TopArtistsApiResponse {
   const factory TopArtistsApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'topartists') required TopArtistsResponse response,
@@ -16,7 +16,7 @@ class TopArtistsApiResponse with _$TopArtistsApiResponse {
 }
 
 @freezed
-class TopArtistsResponse with _$TopArtistsResponse {
+abstract class TopArtistsResponse with _$TopArtistsResponse {
   const factory TopArtistsResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'artist') required List<ArtistResponse> artists,
@@ -27,7 +27,7 @@ class TopArtistsResponse with _$TopArtistsResponse {
 }
 
 @freezed
-class ArtistResponse with _$ArtistResponse {
+abstract class ArtistResponse with _$ArtistResponse {
   const factory ArtistResponse({
     required String name,
     required String url,

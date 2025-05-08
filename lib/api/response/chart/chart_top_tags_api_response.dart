@@ -5,7 +5,7 @@ part 'chart_top_tags_api_response.freezed.dart';
 part 'chart_top_tags_api_response.g.dart';
 
 @freezed
-class ChartTopTagsApiResponse with _$ChartTopTagsApiResponse {
+abstract class ChartTopTagsApiResponse with _$ChartTopTagsApiResponse {
   const factory ChartTopTagsApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'tags') required ChartTopTagsApiBody body,
@@ -16,7 +16,7 @@ class ChartTopTagsApiResponse with _$ChartTopTagsApiResponse {
 }
 
 @freezed
-class ChartTopTagsApiBody with _$ChartTopTagsApiBody {
+abstract class ChartTopTagsApiBody with _$ChartTopTagsApiBody {
   const factory ChartTopTagsApiBody({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'tag') required List<ChartTopTagResponse> tags,
@@ -30,7 +30,7 @@ class ChartTopTagsApiBody with _$ChartTopTagsApiBody {
 }
 
 @freezed
-class ChartTopTagResponse with _$ChartTopTagResponse {
+abstract class ChartTopTagResponse with _$ChartTopTagResponse {
   const factory ChartTopTagResponse({
     required String name,
     required String url,

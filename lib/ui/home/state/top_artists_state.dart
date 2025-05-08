@@ -4,7 +4,7 @@ import 'package:sunrisescrob/model/user/top_artist.dart';
 part 'top_artists_state.freezed.dart';
 
 @freezed
-class TopArtistsState with _$TopArtistsState {
+abstract class TopArtistsState with _$TopArtistsState {
   const factory TopArtistsState({
     required List<TopArtist> topArtists,
     required bool hasMore,

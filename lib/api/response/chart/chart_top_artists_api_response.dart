@@ -6,7 +6,7 @@ part 'chart_top_artists_api_response.freezed.dart';
 part 'chart_top_artists_api_response.g.dart';
 
 @freezed
-class ChartTopArtistsApiResponse with _$ChartTopArtistsApiResponse {
+abstract class ChartTopArtistsApiResponse with _$ChartTopArtistsApiResponse {
   const factory ChartTopArtistsApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'artists') required ChartTopArtistsApiBody body,
@@ -17,7 +17,7 @@ class ChartTopArtistsApiResponse with _$ChartTopArtistsApiResponse {
 }
 
 @freezed
-class ChartTopArtistsApiBody with _$ChartTopArtistsApiBody {
+abstract class ChartTopArtistsApiBody with _$ChartTopArtistsApiBody {
   const factory ChartTopArtistsApiBody({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'artist') required List<ChartArtistResponse> artists,
@@ -31,7 +31,7 @@ class ChartTopArtistsApiBody with _$ChartTopArtistsApiBody {
 }
 
 @freezed
-class ChartArtistResponse with _$ChartArtistResponse {
+abstract class ChartArtistResponse with _$ChartArtistResponse {
   const factory ChartArtistResponse({
     required String name,
     required String url,

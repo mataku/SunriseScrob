@@ -7,7 +7,7 @@ part 'recent_tracks_api_response.freezed.dart';
 part 'recent_tracks_api_response.g.dart';
 
 @freezed
-class RecentTracksApiResponse with _$RecentTracksApiResponse {
+abstract class RecentTracksApiResponse with _$RecentTracksApiResponse {
   const factory RecentTracksApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'recenttracks') required RecentTracksResponse response,
@@ -26,7 +26,7 @@ class RecentTracksApiResponse with _$RecentTracksApiResponse {
 }
 
 @freezed
-class RecentTracksResponse with _$RecentTracksResponse {
+abstract class RecentTracksResponse with _$RecentTracksResponse {
   const factory RecentTracksResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'track') required List<RecentTrackResponse> tracks,
@@ -37,7 +37,7 @@ class RecentTracksResponse with _$RecentTracksResponse {
 }
 
 @freezed
-class RecentTrackResponse with _$RecentTrackResponse {
+abstract class RecentTrackResponse with _$RecentTrackResponse {
   const factory RecentTrackResponse({
     required CommonTextResponse artist,
     // ignore: invalid_annotation_target
@@ -52,7 +52,7 @@ class RecentTrackResponse with _$RecentTrackResponse {
 }
 
 @freezed
-class RecentTrackArtist with _$RecentTrackArtist {
+abstract class RecentTrackArtist with _$RecentTrackArtist {
   const factory RecentTrackArtist({
     // ignore: invalid_annotation_target
     @JsonKey(name: '#text') required String name,

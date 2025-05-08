@@ -8,7 +8,7 @@ part 'album_info_api_response.freezed.dart';
 part 'album_info_api_response.g.dart';
 
 @freezed
-class AlbumInfoApiResponse with _$AlbumInfoApiResponse {
+abstract class AlbumInfoApiResponse with _$AlbumInfoApiResponse {
   const factory AlbumInfoApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'album') required AlbumInfoApiBody response,
@@ -19,7 +19,7 @@ class AlbumInfoApiResponse with _$AlbumInfoApiResponse {
 }
 
 @freezed
-class AlbumInfoApiBody with _$AlbumInfoApiBody {
+abstract class AlbumInfoApiBody with _$AlbumInfoApiBody {
   const factory AlbumInfoApiBody({
     required String artist,
     TopTagsResponse? tags,
@@ -39,7 +39,7 @@ class AlbumInfoApiBody with _$AlbumInfoApiBody {
 }
 
 @freezed
-class AlbumTrackListApiBody with _$AlbumTrackListApiBody {
+abstract class AlbumTrackListApiBody with _$AlbumTrackListApiBody {
   const factory AlbumTrackListApiBody({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'track') required List<AlbumTrackApiBody> tracks,
@@ -50,7 +50,7 @@ class AlbumTrackListApiBody with _$AlbumTrackListApiBody {
 }
 
 @freezed
-class AlbumTrackApiBody with _$AlbumTrackApiBody {
+abstract class AlbumTrackApiBody with _$AlbumTrackApiBody {
   const factory AlbumTrackApiBody({
     int? duration,
     required String url,
@@ -65,7 +65,7 @@ class AlbumTrackApiBody with _$AlbumTrackApiBody {
 }
 
 @freezed
-class RankApiBody with _$RankApiBody {
+abstract class RankApiBody with _$RankApiBody {
   const factory RankApiBody({
     required int rank,
   }) = _RankApiBody;

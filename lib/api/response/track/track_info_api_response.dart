@@ -7,7 +7,7 @@ part 'track_info_api_response.freezed.dart';
 part 'track_info_api_response.g.dart';
 
 @freezed
-class TrackInfoApiResponse with _$TrackInfoApiResponse {
+abstract class TrackInfoApiResponse with _$TrackInfoApiResponse {
   const factory TrackInfoApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'track') required TrackInfoResponse response,
@@ -18,7 +18,7 @@ class TrackInfoApiResponse with _$TrackInfoApiResponse {
 }
 
 @freezed
-class TrackInfoResponse with _$TrackInfoResponse {
+abstract class TrackInfoResponse with _$TrackInfoResponse {
   const factory TrackInfoResponse({
     required String name,
     required String url,
@@ -38,7 +38,7 @@ class TrackInfoResponse with _$TrackInfoResponse {
 }
 
 @freezed
-class TrackAlbumResponse with _$TrackAlbumResponse {
+abstract class TrackAlbumResponse with _$TrackAlbumResponse {
   const factory TrackAlbumResponse({
     required String artist,
     required String title,
@@ -52,7 +52,7 @@ class TrackAlbumResponse with _$TrackAlbumResponse {
 }
 
 @freezed
-class TrackInfoArtist with _$TrackInfoArtist {
+abstract class TrackInfoArtist with _$TrackInfoArtist {
   const factory TrackInfoArtist({
     required String name,
     required String url,

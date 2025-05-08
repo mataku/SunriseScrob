@@ -4,7 +4,7 @@ import 'package:sunrisescrob/model/recent_track/recent_track.dart';
 part 'scrobble_state.freezed.dart';
 
 @freezed
-class ScrobbleState with _$ScrobbleState {
+abstract class ScrobbleState with _$ScrobbleState {
   const factory ScrobbleState({
     required List<RecentTrack> recentTracks,
     required bool hasMore,

@@ -4,7 +4,7 @@ import 'package:sunrisescrob/model/artwork.dart';
 part 'chart_track.freezed.dart';
 
 @freezed
-class ChartTrack with _$ChartTrack {
+abstract class ChartTrack with _$ChartTrack {
   const factory ChartTrack({
     required String name,
     required String playCount,
@@ -16,7 +16,7 @@ class ChartTrack with _$ChartTrack {
 }
 
 @freezed
-class ChartTrackArtist with _$ChartTrackArtist {
+abstract class ChartTrackArtist with _$ChartTrackArtist {
   const factory ChartTrackArtist({
     required String name,
     required String url,

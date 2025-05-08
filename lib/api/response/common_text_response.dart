@@ -5,7 +5,7 @@ part 'common_text_response.freezed.dart';
 part 'common_text_response.g.dart';
 
 @freezed
-class CommonTextResponse with _$CommonTextResponse {
+abstract class CommonTextResponse with _$CommonTextResponse {
   factory CommonTextResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: '#text') required String name,

@@ -4,7 +4,7 @@ part 'paging_attr_body_response.freezed.dart';
 part 'paging_attr_body_response.g.dart';
 
 @freezed
-class PagingAttrBodyResponse with _$PagingAttrBodyResponse {
+abstract class PagingAttrBodyResponse with _$PagingAttrBodyResponse {
   const factory PagingAttrBodyResponse({
     required String page,
     required String perPage,

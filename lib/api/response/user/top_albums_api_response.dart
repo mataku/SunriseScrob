@@ -6,7 +6,7 @@ part 'top_albums_api_response.freezed.dart';
 part 'top_albums_api_response.g.dart';
 
 @freezed
-class TopAlbumsApiResponse with _$TopAlbumsApiResponse {
+abstract class TopAlbumsApiResponse with _$TopAlbumsApiResponse {
   const factory TopAlbumsApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'topalbums') required AlbumRootResponse response,
@@ -17,7 +17,7 @@ class TopAlbumsApiResponse with _$TopAlbumsApiResponse {
 }
 
 @freezed
-class AlbumRootResponse with _$AlbumRootResponse {
+abstract class AlbumRootResponse with _$AlbumRootResponse {
   const factory AlbumRootResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'album') required List<AlbumResponse> albums,
@@ -28,7 +28,7 @@ class AlbumRootResponse with _$AlbumRootResponse {
 }
 
 @freezed
-class AlbumResponse with _$AlbumResponse {
+abstract class AlbumResponse with _$AlbumResponse {
   const factory AlbumResponse({
     required String name,
     required String playcount,
