@@ -32,7 +32,7 @@ jobs:
           flutter build ipa --no-codesign
 
   android:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup JDK
