@@ -68,7 +68,7 @@ class _TitleComponent extends StatelessWidget {
   final String title;
 
   const _TitleComponent({
-    // ignore: unused_element
+    // ignore: unused_element_parameter
     super.key,
     required this.title,
   });

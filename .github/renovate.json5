@@ -58,6 +58,7 @@
   enabledManagers: [
     'github-actions',
     'pub',
+    'fvm'
   ],
   lockFileMaintenance: {
     enabled: true,
