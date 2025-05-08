@@ -17,9 +17,9 @@ permissions:
 
 jobs:
   ios:
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Prepare env
         run: |
           echo "API_KEY=${{ env.API_KEY }}" >> .env
@@ -32,11 +32,11 @@ jobs:
           flutter build ipa --no-codesign
 
   android:
-    runs-on: ubuntu-latest
+    runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup JDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00 # v4.7.1
         with:
           distribution: zulu
           java-version: 17
@@ -52,9 +52,9 @@ jobs:
 
   test:
     # Align the environment for taking screenshots with the development environment.
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Prepare env
         run: |
           echo "API_KEY=${{ env.API_KEY }}" >> .env
@@ -66,7 +66,7 @@ jobs:
       - name: Run tests
         run: flutter test --machine > report.json
       - name: Test Report
-        uses: dorny/test-reporter@v2
+        uses: dorny/test-reporter@6e6a65b7a0bd2c9197df7d0ae36ac5cee784230c # v2.0.0
         if: always()
         with:
           name: flutter test
