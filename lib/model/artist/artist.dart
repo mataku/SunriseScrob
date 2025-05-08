@@ -7,7 +7,7 @@ import 'package:sunrisescrob/model/wiki.dart';
 part 'artist.freezed.dart';
 
 @freezed
-class Artist with _$Artist {
+abstract class Artist with _$Artist {
   const factory Artist({
     required String name,
     required String url,

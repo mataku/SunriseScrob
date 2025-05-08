@@ -7,7 +7,7 @@ import 'package:sunrisescrob/model/wiki.dart';
 part 'album.freezed.dart';
 
 @freezed
-class Album with _$Album {
+abstract class Album with _$Album {
   const factory Album({
     required String artist,
     required String name,
@@ -23,7 +23,7 @@ class Album with _$Album {
 }
 
 @freezed
-class AlbumTrack with _$AlbumTrack {
+abstract class AlbumTrack with _$AlbumTrack {
   const factory AlbumTrack({
     int? duration,
     required String url,

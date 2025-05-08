@@ -5,7 +5,7 @@ part 'similar_content_response.freezed.dart';
 part 'similar_content_response.g.dart';
 
 @freezed
-class SimilarContentResponse with _$SimilarContentResponse {
+abstract class SimilarContentResponse with _$SimilarContentResponse {
   const factory SimilarContentResponse({
     required String name,
     required String url,

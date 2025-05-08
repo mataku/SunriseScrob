@@ -4,7 +4,8 @@ part 'auth_mobile_session_api_response.freezed.dart';
 part 'auth_mobile_session_api_response.g.dart';
 
 @freezed
-class AuthMobileSessionApiResponse with _$AuthMobileSessionApiResponse {
+abstract class AuthMobileSessionApiResponse
+    with _$AuthMobileSessionApiResponse {
   const factory AuthMobileSessionApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'session') required MobileSessionBody sessionBody,
@@ -15,7 +16,7 @@ class AuthMobileSessionApiResponse with _$AuthMobileSessionApiResponse {
 }
 
 @freezed
-class MobileSessionBody with _$MobileSessionBody {
+abstract class MobileSessionBody with _$MobileSessionBody {
   const factory MobileSessionBody({
     required String name,
     required String key,

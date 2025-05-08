@@ -4,7 +4,7 @@ import 'package:sunrisescrob/model/artwork.dart';
 part 'chart_artist.freezed.dart';
 
 @freezed
-class ChartArtist with _$ChartArtist {
+abstract class ChartArtist with _$ChartArtist {
   const factory ChartArtist({
     required String name,
     required String playCount,

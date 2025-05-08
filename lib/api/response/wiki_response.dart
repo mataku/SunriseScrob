@@ -4,7 +4,7 @@ part 'wiki_response.freezed.dart';
 part 'wiki_response.g.dart';
 
 @freezed
-class WikiResponse with _$WikiResponse {
+abstract class WikiResponse with _$WikiResponse {
   const factory WikiResponse({
     required String published,
     required String summary,

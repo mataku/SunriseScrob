@@ -5,7 +5,7 @@ part 'user_get_info_api_response.freezed.dart';
 part 'user_get_info_api_response.g.dart';
 
 @freezed
-class UserGetInfoApiResponse with _$UserGetInfoApiResponse {
+abstract class UserGetInfoApiResponse with _$UserGetInfoApiResponse {
   const factory UserGetInfoApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'user') required UserGetInfoResponse response,
@@ -16,7 +16,7 @@ class UserGetInfoApiResponse with _$UserGetInfoApiResponse {
 }
 
 @freezed
-class UserGetInfoResponse with _$UserGetInfoResponse {
+abstract class UserGetInfoResponse with _$UserGetInfoResponse {
   const factory UserGetInfoResponse({
     required String name,
     required String subscriber,

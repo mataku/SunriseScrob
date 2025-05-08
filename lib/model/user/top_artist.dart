@@ -4,7 +4,7 @@ import 'package:sunrisescrob/model/artwork.dart';
 part 'top_artist.freezed.dart';
 
 @freezed
-class TopArtist with _$TopArtist {
+abstract class TopArtist with _$TopArtist {
   const factory TopArtist({
     required String name,
     required String url,

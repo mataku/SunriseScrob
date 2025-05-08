@@ -4,7 +4,7 @@ import 'package:sunrisescrob/model/artwork.dart';
 part 'similar_content.freezed.dart';
 
 @freezed
-class SimilarContent with _$SimilarContent {
+abstract class SimilarContent with _$SimilarContent {
   const factory SimilarContent({
     required String name,
     required String url,

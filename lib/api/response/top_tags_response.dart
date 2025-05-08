@@ -37,7 +37,7 @@ class TopTagsResponse {
 }
 
 @freezed
-class TagResponse with _$TagResponse {
+abstract class TagResponse with _$TagResponse {
   const factory TagResponse({
     required String name,
     required String url,

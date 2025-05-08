@@ -9,7 +9,7 @@ part 'image_response.g.dart';
 // },
 
 @freezed
-class ImageResponse with _$ImageResponse {
+abstract class ImageResponse with _$ImageResponse {
   factory ImageResponse(
     // ignore: invalid_annotation_target
     @JsonKey(name: '#text') String url,

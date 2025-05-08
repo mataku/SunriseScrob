@@ -6,7 +6,7 @@ part 'chart_top_tracks_api_response.freezed.dart';
 part 'chart_top_tracks_api_response.g.dart';
 
 @freezed
-class ChartTopTracksApiResponse with _$ChartTopTracksApiResponse {
+abstract class ChartTopTracksApiResponse with _$ChartTopTracksApiResponse {
   const factory ChartTopTracksApiResponse({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'tracks') required ChartTopTracksApiBody body,
@@ -17,7 +17,7 @@ class ChartTopTracksApiResponse with _$ChartTopTracksApiResponse {
 }
 
 @freezed
-class ChartTopTracksApiBody with _$ChartTopTracksApiBody {
+abstract class ChartTopTracksApiBody with _$ChartTopTracksApiBody {
   const factory ChartTopTracksApiBody({
     // ignore: invalid_annotation_target
     @JsonKey(name: 'track') required List<ChartTrackResponse> tracks,
@@ -31,7 +31,7 @@ class ChartTopTracksApiBody with _$ChartTopTracksApiBody {
 }
 
 @freezed
-class ChartTrackResponse with _$ChartTrackResponse {
+abstract class ChartTrackResponse with _$ChartTrackResponse {
   const factory ChartTrackResponse({
     required String name,
     required String url,
@@ -48,7 +48,7 @@ class ChartTrackResponse with _$ChartTrackResponse {
 }
 
 @freezed
-class ChartTrackArtistResponse with _$ChartTrackArtistResponse {
+abstract class ChartTrackArtistResponse with _$ChartTrackArtistResponse {
   const factory ChartTrackArtistResponse({
     required String name,
     required String url,
