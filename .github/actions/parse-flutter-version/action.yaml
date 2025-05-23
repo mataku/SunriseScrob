@@ -1,0 +1,12 @@
+name: Parse Flutter Version from fvmrc
+description: 'Parse Flutter version from FVM configuration file'
+outputs:
+  flutter-version:
+    description: 'Extracted version'
+runs:
+  using: 'composite'
+  steps:
+    - run: |
+        version=$(grep -o '"flutter": *"[^"]*"' ./.fvmrc | sed -E 's/.*"flutter": *"([^"]*)".*/\1/')
+        echo "flutter-version=$version" >> $GITHUB_OUTPUT
+      shell: bash
