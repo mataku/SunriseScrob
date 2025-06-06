@@ -72,7 +72,7 @@ dev_dependencies:
   http_mock_adapter: ^0.6.1
   mockito: ^5.4.4
   envied_generator: ^1.0.0
-  go_router_builder: ^2.7.1
+  go_router_builder: ^3.0.0
   golden_toolkit: ^0.15.0
   file: ^7.0.0
 
