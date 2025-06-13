@@ -12,7 +12,8 @@ class AppError with _$AppError implements Exception {
   const factory AppError.serverError() = _ServerError;
   const factory AppError.clientError() = _ClientError;
 
-  static AppError getApiError(error) {
+  // TODO: type
+  static AppError getApiError(dynamic error) {
     if (error is Exception) {
       if (error is DioException) {
         // parse http error
