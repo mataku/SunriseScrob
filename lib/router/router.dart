@@ -92,7 +92,7 @@ class TopShellRoute extends StatefulShellRouteData {
 }
 
 @TypedGoRoute<HomeRoute>(path: HomeRoute.path)
-class HomeRoute extends GoRouteData {
+class HomeRoute extends GoRouteData with _$HomeRoute {
   const HomeRoute();
 
   static const path = '/home';
@@ -104,7 +104,7 @@ class HomeRoute extends GoRouteData {
 }
 
 @TypedGoRoute<DiscoverRoute>(path: DiscoverRoute.path)
-class DiscoverRoute extends GoRouteData {
+class DiscoverRoute extends GoRouteData with _$DiscoverRoute {
   const DiscoverRoute();
 
   static const path = '/discover';
@@ -116,7 +116,7 @@ class DiscoverRoute extends GoRouteData {
 }
 
 @TypedGoRoute<AccountRoute>(path: AccountRoute.path)
-class AccountRoute extends GoRouteData {
+class AccountRoute extends GoRouteData with _$AccountRoute {
   const AccountRoute();
 
   static const path = '/account';
@@ -127,7 +127,7 @@ class AccountRoute extends GoRouteData {
   }
 }
 
-class TrackDetailRoute extends GoRouteData {
+class TrackDetailRoute extends GoRouteData with _$TrackDetailRoute {
   final String artist;
   final String track;
   final String imageKey;
@@ -163,7 +163,7 @@ class TrackDetailRoute extends GoRouteData {
   }
 }
 
-class AlbumDetailRoute extends GoRouteData {
+class AlbumDetailRoute extends GoRouteData with _$AlbumDetailRoute {
   final String artist;
   final String album;
   final String imageKey;
@@ -199,7 +199,7 @@ class AlbumDetailRoute extends GoRouteData {
   }
 }
 
-class ArtistDetailRoute extends GoRouteData {
+class ArtistDetailRoute extends GoRouteData with _$ArtistDetailRoute{
   final String artist;
   final String imageKey;
   final String imageUrl;
@@ -232,7 +232,7 @@ class ArtistDetailRoute extends GoRouteData {
   }
 }
 
-class ThemeSelectionRoute extends GoRouteData {
+class ThemeSelectionRoute extends GoRouteData with _$ThemeSelectionRoute {
   const ThemeSelectionRoute();
 
   static const path = "select_theme";
@@ -246,7 +246,7 @@ class ThemeSelectionRoute extends GoRouteData {
 @TypedGoRoute<LoginRoute>(
   path: LoginRoute.path,
 )
-class LoginRoute extends GoRouteData {
+class LoginRoute extends GoRouteData with _$LoginRoute {
   const LoginRoute();
 
   static const path = '/login';

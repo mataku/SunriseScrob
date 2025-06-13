@@ -11,9 +11,20 @@ Flutter Architecture Sample like Model-View-ViewModel using Last.fm API.
 
 ## Screenshots
 
-| Recent tracks | Album | Artist |
+Tabs
+
+| Home | Discover | Account |
 | :--: | :--: | :--: |
-| ![](./misc/scrobble.png) | ![](./misc/album.png) | ![](./misc/artist.png) |
+| ![](./misc/scrobble.png) | ![](./misc/discover.png) | ![](./misc/account.png) |
+
+- - -
+
+Home Tab contents
+
+| Album | Artist |
+|  :--: | :--: |
+| ![](./misc/album.png) | ![](./misc/artist.png) |
+
 
 ## Setup
 

@@ -51,11 +51,11 @@ android {
         }
     }
 
-    externalNativeBuild {
-        cmake {
-            version "3.31.6"
-        }
-    }
+    // externalNativeBuild {
+    //     cmake {
+    //         version "3.31.6"
+    //     }
+    // }
 }
 
 flutter {

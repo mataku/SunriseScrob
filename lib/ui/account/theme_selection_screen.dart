@@ -78,8 +78,8 @@ class _ThemeSelection extends StatelessWidget {
         padding: const EdgeInsets.only(
           left: 16,
           right: 16,
-          top: 8,
-          bottom: 8,
+          top: 16,
+          bottom: 16,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -87,6 +87,9 @@ class _ThemeSelection extends StatelessWidget {
           children: [
             Text(
               appTheme.label,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
             ),
             if (selected)
               Icon(

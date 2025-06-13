@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sunrisescrob/model/result.dart';
 import 'package:sunrisescrob/repository/auth_repository.dart';
 import 'package:sunrisescrob/ui/common/app_button.dart';
 import 'package:sunrisescrob/ui/common/app_dialog.dart';
@@ -32,6 +31,7 @@ class LoginScreen extends ConsumerWidget {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (errorMessage?.isNotEmpty == true) {
         _showErrorMessage(context, errorMessage!, () {
+          debugPrint("MATAKUDEBUG consume!");
           notifier.consume();
         });
       }
@@ -155,11 +155,16 @@ class LoginScreen extends ConsumerWidget {
 }
 
 void _showErrorMessage(
-    BuildContext context, String message, VoidCallback onConfirm,) {
+  BuildContext context,
+  String message,
+  VoidCallback onConfirm,
+) {
   if (Platform.isAndroid) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(message),
-    ),);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+      ),
+    );
   } else {
     showDialog(
       context: context,
@@ -186,11 +191,12 @@ class LoginNotifier extends ChangeNotifier {
 
   Future login({required String username, required String password}) async {
     error = null;
-    final result = _authRepository.authorize(
+    final result = await _authRepository.authorize(
       username: username,
       password: password,
     );
-    if (result is Failure<String>) {
+    debugPrint("MATAKUDEBUG result $result");
+    if (result.isFailure()) {
       error = 'Failed to login';
     }
     notifyListeners();

@@ -18,6 +18,10 @@ sealed class Result<T> {
     }
     return null;
   }
+
+  bool isFailure() {
+    return this is Failure<T>;
+  }
 }
 
 class Progress<T> extends Result<T> {
