@@ -11,20 +11,20 @@ import 'package:sunrisescrob/ui/theme/app_theme.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-
   // TODO: reconsider
   await KVStore().init();
   runApp(
     ProviderScope(
-      child: Consumer(builder: (context, ref, child) {
-        return FutureBuilder(
-          future: ref.watch(themeNotifierProvider.notifier).getCurrentTheme(),
-          builder: (context, AsyncSnapshot<AppTheme> snapshot) {
-            return snapshot.hasData ? const MyApp() : const SizedBox();
-          },
-        );
-      },),
+      child: Consumer(
+        builder: (context, ref, child) {
+          return FutureBuilder(
+            future: ref.watch(themeNotifierProvider.notifier).getCurrentTheme(),
+            builder: (context, AsyncSnapshot<AppTheme> snapshot) {
+              return snapshot.hasData ? const MyApp() : const SizedBox();
+            },
+          );
+        },
+      ),
     ),
   );
 }
@@ -40,19 +40,25 @@ class MyApp extends ConsumerWidget {
     final themeNotifier = ref.watch(themeNotifierProvider);
     final theme = themeNotifier.appTheme ?? AppTheme.dark;
 
-    SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
-        statusBarBrightness: theme.brightness,
-        statusBarIconBrightness: theme.brightness == Brightness.dark
-            ? Brightness.light
-            : Brightness.dark,
-        statusBarColor: Colors.transparent,
-        systemNavigationBarColor: Colors.transparent,
-        systemNavigationBarIconBrightness: theme.brightness == Brightness.dark
-            ? Brightness.light
-            : Brightness.dark,
-      ),
-    );
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.edgeToEdge,
+      overlays: [SystemUiOverlay.top],
+    ).then((_) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: theme.brightness,
+          statusBarIconBrightness: theme.brightness == Brightness.dark
+              ? Brightness.light
+              : Brightness.dark,
+          statusBarColor: Colors.transparent,
+          systemNavigationBarColor: Colors.transparent,
+          systemNavigationBarIconBrightness:
+              theme.brightness == Brightness.light
+                  ? Brightness.light
+                  : Brightness.dark,
+        ),
+      );
+    });
 
     return MaterialApp.router(
       theme: ThemeData(
