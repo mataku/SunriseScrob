@@ -54,6 +54,18 @@
       automerge: true,
       platformAutomerge: true,
     },
+    {
+      matchUpdateTypes: [
+        'patch',
+        'minor',
+      ],
+      groupName: 'fvm',
+      matchManagers: [
+        'fvm',
+      ],
+      automerge: true,
+      platformAutomerge: true,
+    },
   ],
   enabledManagers: [
     'github-actions',
