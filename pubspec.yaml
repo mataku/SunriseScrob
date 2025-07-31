@@ -66,7 +66,7 @@ dev_dependencies:
   flutter_lints: ^6.0.0
   riverpod_generator: ^2.4.3
   build_runner: ^2.4.11
-  custom_lint: ^0.7.0
+  custom_lint: ^0.8.0
   riverpod_lint: ^2.3.10
   freezed: ^3.0.0
   http_mock_adapter: ^0.6.1
