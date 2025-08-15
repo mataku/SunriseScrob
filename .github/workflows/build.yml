@@ -24,6 +24,9 @@ jobs:
         run: |
           echo "API_KEY=${{ env.API_KEY }}" >> .env
           echo "SHARED_SECRET=${{ env.SHARED_SECRET }}" >> .env
+      # Setup iOS 18.0
+      - name: Setup Xcode version
+        run: sudo xcode-select -s '/Applications/Xcode_16.4.app/Contents/Developer'
       - name: Setup Flutter env
         uses: ./.github/actions/setup-flutter-project
 
@@ -59,6 +62,9 @@ jobs:
         run: |
           echo "API_KEY=${{ env.API_KEY }}" >> .env
           echo "SHARED_SECRET=${{ env.SHARED_SECRET }}" >> .env
+      # Setup iOS 18.0
+      - name: Setup Xcode version
+        run: sudo xcode-select -s '/Applications/Xcode_16.4.app/Contents/Developer'
       - name: Setup Flutter env
         uses: ./.github/actions/setup-flutter-project
       - name: Linter
