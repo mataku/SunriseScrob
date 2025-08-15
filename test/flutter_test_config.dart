@@ -25,4 +25,18 @@ Future<void> testExecutable(FutureOr<void> Function() testMain) async {
       ],
     ),
   );
+
+  // TODO
+  // return AlchemistConfig.runWithConfig(
+  //   config: AlchemistConfig(
+  //     ciGoldensConfig: CiGoldensConfig(
+  //       obscureText: false,
+  //       renderShadows: true,
+  //     ),
+  //     platformGoldensConfig: const PlatformGoldensConfig(
+  //       enabled: false,
+  //     ),
+  //   ),
+  //   run: testMain,
+  // );
 }
