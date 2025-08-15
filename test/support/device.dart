@@ -1,7 +1,6 @@
 // ref. https://github.com/Betterment/alchemist/issues/37
 
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class Device {
   /// [name] specify device name. Ex: Phone, Tablet, Watch
