@@ -29,6 +29,17 @@
       platformAutomerge: true,
     },
     {
+      groupName: 'riverpod',
+      matchPackageNames: [
+        'flutter_riverpod',
+        'riverpod_annotation',
+        'riverpod_generator',
+        'riverpod_lint',
+      ],
+      automerge: true,
+      platformAutomerge: true,
+    },
+    {
       matchUpdateTypes: [
         'patch',
         'minor',
