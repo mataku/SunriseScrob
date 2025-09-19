@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:sunrisescrob/model/profile/user_info.dart';
 import 'package:sunrisescrob/repository/profile_repository.dart';
 import 'package:sunrisescrob/store/session_store.dart';
