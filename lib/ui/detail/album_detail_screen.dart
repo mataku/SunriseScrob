@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sunrisescrob/model/album/album.dart';
 import 'package:sunrisescrob/model/result.dart';
@@ -94,15 +95,16 @@ class _AlbumDetailState extends ConsumerState<AlbumDetailScreen>
                 width: double.infinity,
                 height: 60,
                 decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.black.withAlpha(128),
-                    Colors.white.withAlpha(2),
-                  ],
-                  stops: const [0.0, 1.0],
-                ),),
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.black.withAlpha(128),
+                      Colors.white.withAlpha(2),
+                    ],
+                    stops: const [0.0, 1.0],
+                  ),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.only(

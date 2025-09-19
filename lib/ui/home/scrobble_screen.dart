@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:sunrisescrob/model/artwork.dart';
 import 'package:sunrisescrob/model/recent_track/recent_track.dart';
 import 'package:sunrisescrob/model/result.dart';
@@ -10,7 +11,8 @@ import 'package:sunrisescrob/ui/home/state/scrobble_state.dart';
 
 final scrobbleNotifierProvider = ChangeNotifierProvider((ref) {
   final ScrobbleNotifier notifier = ScrobbleNotifier(
-      recentTracksRepository: ref.read(recentTracksRepositoryProvider),);
+    recentTracksRepository: ref.read(recentTracksRepositoryProvider),
+  );
   notifier.fetchData();
   return notifier;
 });

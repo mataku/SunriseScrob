@@ -70,11 +70,14 @@ final routerProvider = Provider((ref) {
     ),
     TypedStatefulShellBranch<AccountShellBranchData>(
       routes: [
-        TypedGoRoute<AccountRoute>(path: AccountRoute.path, routes: [
-          TypedGoRoute<ThemeSelectionRoute>(
-            path: ThemeSelectionRoute.path,
-          ),
-        ],),
+        TypedGoRoute<AccountRoute>(
+          path: AccountRoute.path,
+          routes: [
+            TypedGoRoute<ThemeSelectionRoute>(
+              path: ThemeSelectionRoute.path,
+            ),
+          ],
+        ),
       ],
     ),
   ],
@@ -85,14 +88,17 @@ class TopShellRoute extends StatefulShellRouteData {
   static final GlobalKey<NavigatorState> $navigatorKey = _shellNavigatorKey;
 
   @override
-  Widget builder(BuildContext context, GoRouterState state,
-      StatefulNavigationShell navigationShell,) {
+  Widget builder(
+    BuildContext context,
+    GoRouterState state,
+    StatefulNavigationShell navigationShell,
+  ) {
     return TopScreen(navigationShell: navigationShell);
   }
 }
 
 @TypedGoRoute<HomeRoute>(path: HomeRoute.path)
-class HomeRoute extends GoRouteData with _$HomeRoute {
+class HomeRoute extends GoRouteData with $HomeRoute {
   const HomeRoute();
 
   static const path = '/home';
@@ -104,7 +110,7 @@ class HomeRoute extends GoRouteData with _$HomeRoute {
 }
 
 @TypedGoRoute<DiscoverRoute>(path: DiscoverRoute.path)
-class DiscoverRoute extends GoRouteData with _$DiscoverRoute {
+class DiscoverRoute extends GoRouteData with $DiscoverRoute {
   const DiscoverRoute();
 
   static const path = '/discover';
@@ -116,7 +122,7 @@ class DiscoverRoute extends GoRouteData with _$DiscoverRoute {
 }
 
 @TypedGoRoute<AccountRoute>(path: AccountRoute.path)
-class AccountRoute extends GoRouteData with _$AccountRoute {
+class AccountRoute extends GoRouteData with $AccountRoute {
   const AccountRoute();
 
   static const path = '/account';
@@ -127,7 +133,7 @@ class AccountRoute extends GoRouteData with _$AccountRoute {
   }
 }
 
-class TrackDetailRoute extends GoRouteData with _$TrackDetailRoute {
+class TrackDetailRoute extends GoRouteData with $TrackDetailRoute {
   final String artist;
   final String track;
   final String imageKey;
@@ -163,7 +169,7 @@ class TrackDetailRoute extends GoRouteData with _$TrackDetailRoute {
   }
 }
 
-class AlbumDetailRoute extends GoRouteData with _$AlbumDetailRoute {
+class AlbumDetailRoute extends GoRouteData with $AlbumDetailRoute {
   final String artist;
   final String album;
   final String imageKey;
@@ -199,7 +205,7 @@ class AlbumDetailRoute extends GoRouteData with _$AlbumDetailRoute {
   }
 }
 
-class ArtistDetailRoute extends GoRouteData with _$ArtistDetailRoute{
+class ArtistDetailRoute extends GoRouteData with $ArtistDetailRoute {
   final String artist;
   final String imageKey;
   final String imageUrl;
@@ -232,7 +238,7 @@ class ArtistDetailRoute extends GoRouteData with _$ArtistDetailRoute{
   }
 }
 
-class ThemeSelectionRoute extends GoRouteData with _$ThemeSelectionRoute {
+class ThemeSelectionRoute extends GoRouteData with $ThemeSelectionRoute {
   const ThemeSelectionRoute();
 
   static const path = "select_theme";
@@ -246,7 +252,7 @@ class ThemeSelectionRoute extends GoRouteData with _$ThemeSelectionRoute {
 @TypedGoRoute<LoginRoute>(
   path: LoginRoute.path,
 )
-class LoginRoute extends GoRouteData with _$LoginRoute {
+class LoginRoute extends GoRouteData with $LoginRoute {
   const LoginRoute();
 
   static const path = '/login';

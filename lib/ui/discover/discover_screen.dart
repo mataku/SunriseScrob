@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:sunrisescrob/model/chart/chart_artist.dart';
 import 'package:sunrisescrob/model/chart/chart_track.dart';
 import 'package:sunrisescrob/model/result.dart';
