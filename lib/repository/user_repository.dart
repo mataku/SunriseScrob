@@ -1,4 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:sunrisescrob/api/endpoint/user_top_albums_endpoint.dart';
 import 'package:sunrisescrob/api/endpoint/user_top_artists_endpoint.dart';
