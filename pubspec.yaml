@@ -75,7 +75,7 @@ dev_dependencies:
   go_router_builder: ^4.0.1
   golden_toolkit: ^0.15.0
   file: ^7.0.0
-  alchemist: ^0.12.1
+  alchemist: 0.13.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
